@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost and Lonely – The Pitts | Jamestown</title>
+    <meta name="description" content="Listen to Lost and Lonely by The Pitts from the album Jamestown. Read the official lyrics, stream the track, and watch the video.">
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "MusicRecording",
+    "name": "Lost and Lonely",
+    "byArtist": {
+        "@type": "MusicGroup",
+        "name": "The Pitts"
+    },
+    "inAlbum": {
+        "@type": "MusicAlbum",
+        "name": "Jamestown",
+        "url": "http://localhost:3000/jamestown-the-pitts"
+    },
+    "duration": "PT4M39S",
+    "image": "http://localhost:3000/pitts-artwork.jpg"
+}
+    </script>
+</head>
+<body>
+    <!-- Punk Splash Screen -->
+    <div id="splash-screen">
+        <div class="punk-bg"></div>
+        <div class="splash-content">
+            <img src="/pitts-artwork.jpg" alt="The Pitts" class="splash-image">
+            <h1 class="splash-text">THE PITTS</h1>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const splash = document.getElementById('splash-screen');
+                splash.classList.add('slide-up-out');
+                setTimeout(() => splash.style.display = 'none', 600); // matches CSS transition
+            }, 1800); // Show splash for 1.8 seconds
+        });
+    </script>
+
+    <nav class="navbar">
+        <a href="/jamestown-the-pitts" class="nav-brand">The Pitts</a>
+        <div class="nav-links">
+            <a href="/jamestown-the-pitts">Album: Jamestown</a>
+        </div>
+    </nav>
+    <main>
+        
+        <section class="hero glass-panel track-hero">
+            <div class="hero-content">
+                <img src="/pitts-artwork.jpg" alt="Lost and Lonely by The Pitts - Jamestown Album Cover" class="album-cover track-cover">
+                <div class="hero-text">
+                    <h1>Lost and Lonely by The Pitts</h1>
+                    <p class="opening-copy">Lost and Lonely by The Pitts is a track from the album Jamestown. Listen to the official track, read the lyrics, and explore more songs from the album.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="media-section">
+            <div class="embed-container">
+                <h3>Listen on Spotify</h3>
+                <div class="placeholder-embed spotify-embed">
+                    <!-- Spotify Embed Code Here -->
+                    <p>Spotify Player for Lost and Lonely</p>
+                </div>
+            </div>
+            <div class="embed-container">
+                <h3>Listen on Apple Music</h3>
+                <div class="placeholder-embed apple-embed">
+                    <!-- Apple Music Embed Code Here -->
+                    <p>Apple Music Player for Lost and Lonely</p>
+                </div>
+            </div>
+            <div class="embed-container">
+                <h3>Watch on YouTube</h3>
+                <div class="placeholder-embed youtube-embed">
+                    <!-- YouTube Embed Code Here -->
+                    <p>YouTube Video for Lost and Lonely</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lyrics-section glass-panel">
+            <h2>Lost and Lonely Lyrics</h2>
+            <div class="lyrics">
+                <p>
+                    (Verse 1)<br>
+                    Lyrics for Lost and Lonely go here...<br>
+                    This is a placeholder for the actual lyrics.<br>
+                    <br>
+                    (Chorus)<br>
+                    Singing the song, feeling the vibe<br>
+                    Lost and Lonely coming alive...
+                </p>
+            </div>
+        </section>
+        
+        <section class="explore-section">
+            <h2>More from Jamestown</h2>
+            <div class="other-tracks"><a href="/jamestown-song-the-pitts" class="pill-link">Jamestown</a><a href="/mother-mary-the-pitts" class="pill-link">Mother Mary</a><a href="/cash-flow-money-the-pitts" class="pill-link">Cash Flow Money</a><a href="/wicked-lady-the-pitts" class="pill-link">Wicked Lady</a><a href="/sweet-revenge-the-pitts" class="pill-link">Sweet Revenge</a><a href="/break-me-down-the-pitts" class="pill-link">Break Me Down</a><a href="/polygraph-the-pitts" class="pill-link">Polygraph</a><a href="/wasted-away-the-pitts" class="pill-link">Wasted Away</a></div>
+            <div class="back-to-album">
+                <a href="/jamestown-the-pitts" class="btn btn-primary">Back to Full Album</a>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 The Pitts. All rights reserved.</p>
+    </footer>
+</body>
+</html>
