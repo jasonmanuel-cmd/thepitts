@@ -121,6 +121,10 @@ main {
     font-weight: 800;
     color: var(--text-main);
     letter-spacing: -0.02em;
+    padding: 0.5rem 0;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .nav-brand:hover {
@@ -131,7 +135,10 @@ main {
     color: var(--text-muted);
     font-weight: 600;
     margin-left: 1.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .nav-links a:hover {
@@ -328,12 +335,15 @@ main {
 }
 
 .pill-link {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.25rem;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 9999px;
     font-size: 0.875rem;
     font-weight: 600;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .pill-link:hover {
@@ -741,7 +751,7 @@ footer {
 }
 
 .fan-badge {
-    padding: 0.75rem 1.5rem;
+    padding: 0.875rem 1.5rem;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 9999px;
@@ -749,6 +759,9 @@ footer {
     font-size: 1rem;
     color: var(--text-main);
     transition: all 0.2s ease;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .fan-badge:hover {
@@ -807,6 +820,9 @@ footer {
 .btn-sm {
     padding: 0.625rem 1.25rem;
     font-size: 0.875rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 /* ===================================================
@@ -825,12 +841,15 @@ footer {
 }
 
 .contact-email {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--primary);
     margin-bottom: 1.5rem;
     transition: color 0.2s ease;
+    padding: 0.5rem 0;
+    min-height: 44px;
 }
 
 .contact-email:hover {
@@ -848,8 +867,8 @@ footer {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     background: var(--secondary);
     border-radius: 8px;
     color: var(--text-main);
