@@ -138,6 +138,11 @@ main {
     color: var(--text-main);
 }
 
+.nav-external {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
 /* Utilities */
 .glass-panel {
     background: var(--glass-bg);
@@ -503,7 +508,7 @@ footer {
 .epk-hero-content h1 {
     font-size: 5rem;
     margin-bottom: 0.75rem;
-    background: linear-gradient(to right, #f4f4f5, #c084fc);
+    background: linear-gradient(to right, #ef4444, #dc2626);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

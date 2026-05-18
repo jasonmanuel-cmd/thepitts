@@ -70,6 +70,11 @@ splash_screen = """<!-- Punk Splash Screen -->
     </div>
     <script>
         window.addEventListener('load', () => {
+            if (sessionStorage.getItem('splashShown')) {
+                document.getElementById('splash-screen').style.display = 'none';
+                return;
+            }
+            sessionStorage.setItem('splashShown', 'true');
             setTimeout(() => {
                 const splash = document.getElementById('splash-screen');
                 splash.classList.add('slide-up-out');
@@ -90,10 +95,12 @@ def navbar_html(active="epk"):
     album_link += '>Album: Jamestown</a>'
 
     links = epk_link + album_link
+    poison_well = '<a href="https://poisonwellrecords.com/" target="_blank" rel="noopener" class="nav-external">Poison Well Records</a>'
     return f"""<nav class="navbar">
         <a href="/" class="nav-brand">The Pitts</a>
         <div class="nav-links">
             {links}
+            {poison_well}
         </div>
     </nav>"""
 

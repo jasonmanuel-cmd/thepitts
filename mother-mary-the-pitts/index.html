@@ -38,6 +38,11 @@
     </div>
     <script>
         window.addEventListener('load', () => {
+            if (sessionStorage.getItem('splashShown')) {
+                document.getElementById('splash-screen').style.display = 'none';
+                return;
+            }
+            sessionStorage.setItem('splashShown', 'true');
             setTimeout(() => {
                 const splash = document.getElementById('splash-screen');
                 splash.classList.add('slide-up-out');
@@ -49,6 +54,7 @@
         <a href="/" class="nav-brand">The Pitts</a>
         <div class="nav-links">
             <a href="/">EPK</a><a href="/jamestown-the-pitts">Album: Jamestown</a>
+            <a href="https://poisonwellrecords.com/" target="_blank" rel="noopener" class="nav-external">Poison Well Records</a>
         </div>
     </nav>
     <main id="main-content">
