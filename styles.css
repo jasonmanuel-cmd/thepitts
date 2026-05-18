@@ -2,8 +2,8 @@
     --bg-color: #0a0a0c;
     --text-main: #f4f4f5;
     --text-muted: #a1a1aa;
-    --primary: #7c3aed;
-    --primary-hover: #6d28d9;
+    --primary: #dc2626;
+    --primary-hover: #b91c1c;
     --secondary: #1f2937;
     --secondary-hover: #374151;
     --glass-bg: rgba(255, 255, 255, 0.03);
@@ -49,8 +49,8 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     background-image: 
-        radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.08), transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.08), transparent 25%);
+        radial-gradient(circle at 15% 50%, rgba(220, 38, 38, 0.08), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(185, 28, 28, 0.06), transparent 25%);
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
@@ -164,7 +164,7 @@ main {
 .btn-primary {
     background: var(--primary);
     color: white;
-    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.39);
+    box-shadow: 0 4px 14px rgba(220, 38, 38, 0.39);
 }
 
 .btn-primary:hover {
@@ -410,10 +410,10 @@ footer {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    filter: contrast(1.5) saturate(0) sepia(1) hue-rotate(280deg); /* Punk magenta tone */
+    filter: contrast(1.5) saturate(0) sepia(1) hue-rotate(340deg); /* Blood red tone */
     mix-blend-mode: hard-light;
-    border: 5px solid #ff0055;
-    box-shadow: 10px 10px 0px #00ffcc, -10px -10px 0px #ff0055;
+    border: 5px solid #dc2626;
+    box-shadow: 10px 10px 0px #7f1d1d, -10px -10px 0px #b91c1c;
     animation: punkShake 0.3s infinite alternate;
 }
 
@@ -424,12 +424,12 @@ footer {
     transform: translate(-50%, -50%);
     font-size: 6rem;
     font-weight: 900;
-    color: #fff;
+    color: #ef4444;
     text-transform: uppercase;
-    text-shadow: 4px 4px 0 #ff0055, -4px -4px 0 #00ffcc;
+    text-shadow: 0 0 8px rgba(220, 38, 38, 0.8), 0 0 20px rgba(185, 28, 28, 0.5), 4px 4px 0 #7f1d1d, -2px -2px 0 #991b1b;
     letter-spacing: -2px;
     pointer-events: none;
-    animation: punkGlitch 0.4s infinite;
+    animation: bleedGlitch 0.5s infinite;
     white-space: nowrap;
 }
 
@@ -447,13 +447,13 @@ footer {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-@keyframes punkGlitch {
-    0% { clip-path: inset(10% 0 80% 0); transform: translate(-50%, -50%) translate(-2px, 2px); }
-    20% { clip-path: inset(80% 0 10% 0); transform: translate(-50%, -50%) translate(-2px, -2px); }
-    40% { clip-path: inset(50% 0 30% 0); transform: translate(-50%, -50%) translate(2px, 2px); }
-    60% { clip-path: inset(20% 0 60% 0); transform: translate(-50%, -50%) translate(2px, -2px); }
-    80% { clip-path: inset(90% 0 5% 0); transform: translate(-50%, -50%) translate(-2px, 2px); }
-    100% { clip-path: inset(40% 0 50% 0); transform: translate(-50%, -50%) translate(2px, -2px); }
+@keyframes bleedGlitch {
+    0% { clip-path: inset(15% 0 75% 0); transform: translate(-50%, -50%) translate(-2px, 3px); text-shadow: 0 0 12px rgba(220,38,38,0.9), 0 0 24px rgba(185,28,28,0.5), 4px 6px 0 #7f1d1d, -2px -2px 0 #991b1b; }
+    20% { clip-path: inset(75% 0 10% 0); transform: translate(-50%, -50%) translate(3px, -2px); text-shadow: 0 0 6px rgba(220,38,38,0.7), 0 0 16px rgba(185,28,28,0.4), 3px 3px 0 #7f1d1d, -1px -1px 0 #991b1b; }
+    40% { clip-path: inset(45% 0 35% 0); transform: translate(-50%, -50%) translate(-3px, 4px); text-shadow: 0 0 18px rgba(220,38,38,1), 0 0 30px rgba(185,28,28,0.6), 5px 5px 0 #7f1d1d, -3px -3px 0 #991b1b; }
+    60% { clip-path: inset(25% 0 55% 0); transform: translate(-50%, -50%) translate(2px, -3px); text-shadow: 0 0 8px rgba(220,38,38,0.8), 0 0 20px rgba(185,28,28,0.5), 4px 2px 0 #7f1d1d, -2px -4px 0 #991b1b; }
+    80% { clip-path: inset(85% 0 5% 0); transform: translate(-50%, -50%) translate(-3px, 2px); text-shadow: 0 0 14px rgba(220,38,38,0.9), 0 0 28px rgba(153,27,27,0.5), 2px 5px 0 #7f1d1d, -4px -1px 0 #991b1b; }
+    100% { clip-path: inset(35% 0 50% 0); transform: translate(-50%, -50%) translate(3px, -2px); text-shadow: 0 0 10px rgba(220,38,38,0.8), 0 0 24px rgba(185,28,28,0.5), 3px 4px 0 #7f1d1d, -3px -3px 0 #991b1b; }
 }
 
 /* ===================================================
@@ -685,7 +685,7 @@ footer {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary), #6d28d9);
+    background: linear-gradient(135deg, var(--primary), #991b1b);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1137,9 +1137,13 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .splash-image,
+    .splash-image {
+        animation: none;
+    }
+
     .splash-text {
         animation: none;
+        text-shadow: 0 0 8px rgba(220, 38, 38, 0.6), 4px 4px 0 #7f1d1d;
     }
 }
 
