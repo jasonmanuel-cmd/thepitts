@@ -10,3 +10,8 @@ bandpic.png
 # OS files
 .DS_Store
 Thumbs.db
+
+# Vite
+dist/
+node_modules/
+*.tsbuildinfo
