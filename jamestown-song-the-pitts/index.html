@@ -19,20 +19,21 @@
     "inAlbum": {
         "@type": "MusicAlbum",
         "name": "Jamestown",
-        "url": "http://localhost:3000/jamestown-the-pitts"
+        "url": "https://thepittsband.com/jamestown-the-pitts"
     },
     "duration": "PT3M20S",
-    "image": "http://localhost:3000/pitts-artwork.jpg"
+    "image": "https://thepittsband.com/pitts-artwork.jpg"
 }
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <!-- Punk Splash Screen -->
     <div id="splash-screen">
         <div class="punk-bg"></div>
         <div class="splash-content">
             <img src="/pitts-artwork.jpg" alt="The Pitts" class="splash-image">
-            <h1 class="splash-text">THE PITTS</h1>
+            <span class="splash-text">THE PITTS</span>
         </div>
     </div>
     <script>
@@ -40,18 +41,17 @@
             setTimeout(() => {
                 const splash = document.getElementById('splash-screen');
                 splash.classList.add('slide-up-out');
-                setTimeout(() => splash.style.display = 'none', 600); // matches CSS transition
-            }, 1800); // Show splash for 1.8 seconds
+                setTimeout(() => splash.style.display = 'none', 600);
+            }, 1800);
         });
     </script>
-
     <nav class="navbar">
-        <a href="/jamestown-the-pitts" class="nav-brand">The Pitts</a>
+        <a href="/" class="nav-brand">The Pitts</a>
         <div class="nav-links">
-            <a href="/jamestown-the-pitts">Album: Jamestown</a>
+            <a href="/">EPK</a><a href="/jamestown-the-pitts">Album: Jamestown</a>
         </div>
     </nav>
-    <main>
+    <main id="main-content">
         
         <section class="hero glass-panel track-hero">
             <div class="hero-content">
@@ -62,26 +62,23 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="media-section">
             <div class="embed-container">
                 <h3>Listen on Spotify</h3>
                 <div class="placeholder-embed spotify-embed">
-                    <!-- Spotify Embed Code Here -->
                     <p>Spotify Player for Jamestown</p>
                 </div>
             </div>
             <div class="embed-container">
                 <h3>Listen on Apple Music</h3>
                 <div class="placeholder-embed apple-embed">
-                    <!-- Apple Music Embed Code Here -->
                     <p>Apple Music Player for Jamestown</p>
                 </div>
             </div>
             <div class="embed-container">
                 <h3>Watch on YouTube</h3>
                 <div class="placeholder-embed youtube-embed">
-                    <!-- YouTube Embed Code Here -->
                     <p>YouTube Video for Jamestown</p>
                 </div>
             </div>
@@ -89,19 +86,12 @@
 
         <section class="lyrics-section glass-panel">
             <h2>Jamestown Lyrics</h2>
-            <div class="lyrics">
-                <p>
-                    (Verse 1)<br>
-                    Lyrics for Jamestown go here...<br>
-                    This is a placeholder for the actual lyrics.<br>
-                    <br>
-                    (Chorus)<br>
-                    Singing the song, feeling the vibe<br>
-                    Jamestown coming alive...
-                </p>
-            </div>
+            <div class="lyrics-placeholder">
+                    <span class="placeholder-badge">Coming soon</span>
+                    <p>Lyrics for "Jamestown" are not yet available. Check back for the full text.</p>
+                </div>
         </section>
-        
+
         <section class="explore-section">
             <h2>More from Jamestown</h2>
             <div class="other-tracks"><a href="/mother-mary-the-pitts" class="pill-link">Mother Mary</a><a href="/cash-flow-money-the-pitts" class="pill-link">Cash Flow Money</a><a href="/wicked-lady-the-pitts" class="pill-link">Wicked Lady</a><a href="/sweet-revenge-the-pitts" class="pill-link">Sweet Revenge</a><a href="/break-me-down-the-pitts" class="pill-link">Break Me Down</a><a href="/lost-and-lonely-the-pitts" class="pill-link">Lost and Lonely</a><a href="/polygraph-the-pitts" class="pill-link">Polygraph</a><a href="/wasted-away-the-pitts" class="pill-link">Wasted Away</a></div>

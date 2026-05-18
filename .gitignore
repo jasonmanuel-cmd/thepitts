@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Large originals (WebP versions are used for web)
+hero.png
+bandpic.png
+
+# OS files
+.DS_Store
+Thumbs.db
