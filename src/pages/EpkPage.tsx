@@ -17,7 +17,7 @@ export default function EpkPage() {
         <img
           src="/hero.webp"
           alt=""
-          loading="lazy"
+          fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0c]/70 via-[#0a0a0c]/50 to-[#0a0a0c]" />
@@ -169,10 +169,10 @@ export default function EpkPage() {
         <h2 className="text-2xl font-bold text-text-primary mb-2">Stream Jamestown</h2>
         <p className="text-text-muted text-sm mb-8">Listen on your platform of choice</p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <span className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold cursor-default opacity-60 min-h-touch flex-1">
+          <span aria-disabled="true" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold opacity-60 min-h-touch flex-1 cursor-default" role="button">
             Listen on Spotify
           </span>
-          <span className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold cursor-default opacity-60 min-h-touch flex-1">
+          <span aria-disabled="true" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold opacity-60 min-h-touch flex-1 cursor-default" role="button">
             Listen on Apple Music
           </span>
         </div>
@@ -254,18 +254,18 @@ export default function EpkPage() {
           >
             booking@thepittsband.com
           </a>
-          <div className="flex items-center justify-center gap-3 mt-8">
-            <span className="p-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted opacity-60 cursor-default min-h-touch min-w-touch flex items-center justify-center">
-              <Camera className="w-5 h-5" />
+          <div className="flex items-center justify-center gap-3 mt-8" role="list" aria-label="Social media links, coming soon">
+            <span role="listitem" className="p-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted opacity-60 min-h-touch min-w-touch flex items-center justify-center cursor-default" aria-label="Instagram (coming soon)" aria-disabled="true">
+              <Camera className="w-5 h-5" aria-hidden="true" />
             </span>
-            <span className="p-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted opacity-60 cursor-default min-h-touch min-w-touch flex items-center justify-center">
-              <Music2 className="w-5 h-5" />
+            <span role="listitem" className="p-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted opacity-60 min-h-touch min-w-touch flex items-center justify-center cursor-default" aria-label="TikTok (coming soon)" aria-disabled="true">
+              <Music2 className="w-5 h-5" aria-hidden="true" />
             </span>
-            <span className="p-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted opacity-60 cursor-default min-h-touch min-w-touch flex items-center justify-center">
-              <Video className="w-5 h-5" />
+            <span role="listitem" className="p-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted opacity-60 min-h-touch min-w-touch flex items-center justify-center cursor-default" aria-label="YouTube (coming soon)" aria-disabled="true">
+              <Video className="w-5 h-5" aria-hidden="true" />
             </span>
-            <span className="p-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted opacity-60 cursor-default min-h-touch min-w-touch flex items-center justify-center">
-              <Globe className="w-5 h-5" />
+            <span role="listitem" className="p-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted opacity-60 min-h-touch min-w-touch flex items-center justify-center cursor-default" aria-label="Facebook (coming soon)" aria-disabled="true">
+              <Globe className="w-5 h-5" aria-hidden="true" />
             </span>
           </div>
         </div>

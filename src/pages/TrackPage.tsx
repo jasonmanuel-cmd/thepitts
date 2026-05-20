@@ -48,7 +48,7 @@ export default function TrackPage() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="text-center">
+        <div className="text-center" role="alert">
           <h1 className="text-4xl font-extrabold text-text-primary mb-4">404</h1>
           <p className="text-text-secondary mb-8">Track not found.</p>
           <Link

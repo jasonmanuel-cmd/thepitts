@@ -33,10 +33,10 @@ export default function AlbumPage() {
                 dive deep into the music.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mt-6">
-                <span className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold cursor-default opacity-60 min-h-touch">
+                <span aria-disabled="true" role="button" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold opacity-60 min-h-touch cursor-default">
                   Listen on Spotify
                 </span>
-                <span className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold cursor-default opacity-60 min-h-touch">
+                <span aria-disabled="true" role="button" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold opacity-60 min-h-touch cursor-default">
                   Listen on Apple Music
                 </span>
               </div>

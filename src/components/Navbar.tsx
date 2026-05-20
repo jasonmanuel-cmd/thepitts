@@ -7,7 +7,7 @@ interface NavbarProps {
 
 export default function Navbar({ active }: NavbarProps) {
   return (
-    <nav className="sticky top-0 z-40 backdrop-blur-xl bg-[#0a0a0c]/80 border-b border-white/[0.06]">
+    <nav aria-label="Main" className="sticky top-0 z-40 backdrop-blur-xl bg-[#0a0a0c]/80 border-b border-white/[0.06]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         <Link
           to="/"
