@@ -117,7 +117,7 @@ export default function EpkPage() {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
         <h2 className="text-2xl font-bold text-text-primary mb-2">Band</h2>
         <p className="text-text-muted text-sm mb-6">The people behind the noise</p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           {members.map((m) => (
             <MemberCard key={m.initials} member={m} />
           ))}
@@ -286,11 +286,8 @@ export default function EpkPage() {
 }
 
 function MemberCard({ member }: { member: BandMember }) {
-  const placeholder = member.name === 'Name TBD'
-
   return (
     <div className="glass-card p-6 text-center">
-      {placeholder && <span className="placeholder-badge">Awaiting details</span>}
       {member.photoPath ? (
         <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-white/[0.1]">
           <img
@@ -307,7 +304,7 @@ function MemberCard({ member }: { member: BandMember }) {
       )}
       <h3 className="text-text-primary font-semibold mb-1">{member.name}</h3>
       <p className="text-text-muted text-sm">{member.role}</p>
-      <p className="text-text-muted text-xs mt-2">{member.hometown}</p>
+      {member.hometown && <p className="text-text-muted text-xs mt-2">{member.hometown}</p>}
     </div>
   )
 }
