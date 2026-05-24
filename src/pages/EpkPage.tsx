@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Camera, Video, Globe, Music2, Play, ChevronRight, ExternalLink } from 'lucide-react'
 import { tracks, comparableArtists } from '../data/tracks'
+import { members, type BandMember } from '../data/members'
 
 export default function EpkPage() {
   return (
@@ -115,11 +116,11 @@ export default function EpkPage() {
 
       <section className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
         <h2 className="text-2xl font-bold text-text-primary mb-2">Band</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-          <MemberCard initials="JM" role="Lead Vocals, Guitar" />
-          <MemberCard initials="LG" role="Lead Guitar, Backing Vocals" />
-          <MemberCard initials="B" role="Bass" />
-          <MemberCard initials="D" role="Drums" />
+        <p className="text-text-muted text-sm mb-6">The people behind the noise</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {members.map((m) => (
+            <MemberCard key={m.initials} member={m} />
+          ))}
         </div>
       </section>
 
@@ -284,16 +285,29 @@ export default function EpkPage() {
   )
 }
 
-function MemberCard({ initials, role }: { initials: string; role: string }) {
+function MemberCard({ member }: { member: BandMember }) {
+  const placeholder = member.name === 'Name TBD'
+
   return (
     <div className="glass-card p-6 text-center">
-      <span className="placeholder-badge">Awaiting details</span>
-      <div className="w-16 h-16 rounded-full bg-surface-4 border border-white/[0.1] flex items-center justify-center mx-auto mb-4">
-        <span className="text-text-secondary text-lg font-bold">{initials}</span>
-      </div>
-      <h3 className="text-text-primary font-semibold mb-1">Name TBD</h3>
-      <p className="text-text-muted text-sm">{role}</p>
-      <p className="text-text-muted text-xs mt-2">Hometown TBD</p>
+      {placeholder && <span className="placeholder-badge">Awaiting details</span>}
+      {member.photoPath ? (
+        <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-white/[0.1]">
+          <img
+            src={member.photoPath}
+            alt={`${member.name} photo`}
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ) : (
+        <div className="w-16 h-16 rounded-full bg-surface-4 border border-white/[0.1] flex items-center justify-center mx-auto mb-4">
+          <span className="text-text-secondary text-lg font-bold">{member.initials}</span>
+        </div>
+      )}
+      <h3 className="text-text-primary font-semibold mb-1">{member.name}</h3>
+      <p className="text-text-muted text-sm">{member.role}</p>
+      <p className="text-text-muted text-xs mt-2">{member.hometown}</p>
     </div>
   )
 }
