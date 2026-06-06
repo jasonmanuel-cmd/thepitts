@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Camera, Video, Globe, Music2, Play, ChevronRight, ExternalLink } from 'lucide-react'
-import { tracks, comparableArtists } from '../data/tracks'
+import { tracks, comparableArtists, streamingLinks } from '../data/tracks'
 import { members, type BandMember } from '../data/members'
 
 export default function EpkPage() {
@@ -169,13 +169,19 @@ export default function EpkPage() {
       <section id="music" className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
         <h2 className="text-2xl font-bold text-text-primary mb-2">Stream Jamestown</h2>
         <p className="text-text-muted text-sm mb-8">Listen on your platform of choice</p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <span aria-disabled="true" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold opacity-60 min-h-touch flex-1 cursor-default" role="button">
-            Listen on Spotify
-          </span>
-          <span aria-disabled="true" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold opacity-60 min-h-touch flex-1 cursor-default" role="button">
-            Listen on Apple Music
-          </span>
+        <div className="flex flex-wrap gap-3">
+          {(streamingLinks['Jamestown'] ?? []).map((link) => (
+            <a
+              key={link.platform}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-secondary text-sm font-semibold min-h-touch hover:bg-white/[0.1] hover:text-text-primary hover:border-brand/30 transition-all"
+            >
+              {link.platform}
+              <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+            </a>
+          ))}
         </div>
       </section>
 

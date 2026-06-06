@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ChevronRight } from 'lucide-react'
-import { tracks } from '../data/tracks'
+import { ChevronRight, ExternalLink } from 'lucide-react'
+import { tracks, streamingLinks } from '../data/tracks'
 
 export default function AlbumPage() {
   return (
@@ -32,13 +32,19 @@ export default function AlbumPage() {
                 The complete album experience. Listen to the official tracks, explore the lyrics, and
                 dive deep into the music.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 mt-6">
-                <span aria-disabled="true" role="button" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold opacity-60 min-h-touch cursor-default">
-                  Listen on Spotify
-                </span>
-                <span aria-disabled="true" role="button" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold opacity-60 min-h-touch cursor-default">
-                  Listen on Apple Music
-                </span>
+              <div className="flex flex-wrap gap-3 mt-6">
+                {(streamingLinks['Jamestown'] ?? []).map((link) => (
+                  <a
+                    key={link.platform}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-secondary text-sm font-semibold min-h-touch hover:bg-white/[0.1] hover:text-text-primary hover:border-brand/30 transition-all"
+                  >
+                    {link.platform}
+                    <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+                  </a>
+                ))}
               </div>
             </div>
           </div>

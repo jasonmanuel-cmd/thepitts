@@ -17,7 +17,7 @@ export const members: BandMember[] = [
   },
   {
     initials: 'M',
-    name: 'Armando E. Moreno',
+    name: 'Mando',
     role: 'Lead Guitar',
     hometown: 'Ventura, CA',
     photoPath: '/mando/mondo.png',

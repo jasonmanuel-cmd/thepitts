@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { getTrackBySlug, tracks, lyricsMap } from '../data/tracks'
+import { getTrackBySlug, tracks, lyricsMap, streamingLinks, type StreamingLink } from '../data/tracks'
 
 export default function TrackPage() {
   const { slug } = useParams<{ slug: string }>()
@@ -98,19 +98,30 @@ export default function TrackPage() {
       </section>
 
       <section className="max-w-4xl mx-auto px-4 sm:px-6 pb-16">
-        <div className="grid md:grid-cols-3 gap-4">
-          <div className="glass-card p-6 text-center aspect-video flex flex-col items-center justify-center">
-            <p className="text-text-muted text-xs uppercase tracking-wider mb-2">Spotify</p>
-            <p className="text-text-muted text-sm">Player for {track.title}</p>
-          </div>
-          <div className="glass-card p-6 text-center aspect-video flex flex-col items-center justify-center">
-            <p className="text-text-muted text-xs uppercase tracking-wider mb-2">Apple Music</p>
-            <p className="text-text-muted text-sm">Player for {track.title}</p>
-          </div>
-          <div className="glass-card p-6 text-center aspect-video flex flex-col items-center justify-center">
-            <p className="text-text-muted text-xs uppercase tracking-wider mb-2">YouTube</p>
-            <p className="text-text-muted text-sm">Video for {track.title}</p>
-          </div>
+        <h2 className="text-xl font-bold text-text-primary mb-4">Listen to &ldquo;{track.title}&rdquo;</h2>
+        <div className="flex flex-wrap gap-3">
+          {(streamingLinks[track.title] ?? []).length > 0 ? (
+            (streamingLinks[track.title] ?? []).map((link: StreamingLink) => (
+              <a
+                key={link.platform}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-secondary text-sm font-semibold min-h-touch hover:bg-white/[0.1] hover:text-text-primary hover:border-brand/30 transition-all"
+              >
+                {link.platform}
+              </a>
+            ))
+          ) : (
+            <>
+              <span aria-disabled="true" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold opacity-60 min-h-touch cursor-default" role="button">
+                Listen on Spotify
+              </span>
+              <span aria-disabled="true" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.06] border border-white/[0.1] text-text-muted text-sm font-semibold opacity-60 min-h-touch cursor-default" role="button">
+                Listen on Apple Music
+              </span>
+            </>
+          )}
         </div>
       </section>
 
