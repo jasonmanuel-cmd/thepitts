@@ -53,12 +53,7 @@ export default function EpkPage() {
               <ChevronRight className="w-4 h-4" />
             </a>
           </div>
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-muted">
-            <span className="text-xs tracking-widest uppercase">Scroll</span>
-            <div className="w-5 h-8 rounded-full border border-white/20 flex justify-center pt-1.5">
-              <div className="w-1 h-2 rounded-full bg-text-muted animate-bounce" />
-            </div>
-          </div>
+
         </div>
       </section>
 

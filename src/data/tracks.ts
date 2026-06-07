@@ -29,6 +29,8 @@ export const lyricsMap: Record<string, string> = {
   'Cash Flow Money': 'cash-flow-money-the-pitts/cashflowmoneylyrics.txt',
   'Lost and Lonely': 'lost-and-lonely-the-pitts/lostandlonelylyrics.txt',
   'Wicked Lady': 'Wicked-lady-the-pitts/wickedlady.txt',
+  'Break Me Down': 'break-me-down-the-pitts/breakmedownlyrics.txt',
+  'Wasted Away': 'Wasted-away-the-pitts/Wastedawaylyrics.txt',
   'Polygraph': 'polygraph-the-pitts/polygraphlyrics.txt',
 }
 

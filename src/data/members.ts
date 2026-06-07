@@ -19,7 +19,7 @@ export const members: BandMember[] = [
     initials: 'M',
     name: 'Mando',
     role: 'Lead Guitar',
-    hometown: 'Ventura, CA',
+    hometown: '',
     photoPath: '/mando/mondo.png',
     bioPath: '/mando/bio.txt',
   },
