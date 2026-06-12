@@ -31,7 +31,7 @@ export const members: BandMember[] = [
     role: 'Rhythm Guitar',
     hometown: '',
     photoPath: '/billy/billyV.png',
-    videoPath: '/billy/billysvideo.mp4',
+    videoPath: '/billy/billysvideo-avc.mp4',
     profileSlug: 'billy-von',
   },
   {
