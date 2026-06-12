@@ -48,10 +48,9 @@ export const getTrackBySlug = (slug: string): Track | undefined =>
   tracks.find(t => t.slug === slug)
 
 export const comparableArtists = [
-  'Queens of the Stone Age',
-  'The Black Keys',
-  'Rage Against the Machine',
-  'The Hives',
-  'The Stooges',
-  'Dead Kennedys',
+  'Gaslight Anthem',
+  'The Replacements',
+  'Tom Petty and the Heartbreakers',
+  'The Menzingers',
+  'Lucero',
 ]

@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import EpkPage from './pages/EpkPage'
 import AlbumPage from './pages/AlbumPage'
 import TrackPage from './pages/TrackPage'
+import MemberPage from './pages/MemberPage'
 
 export default function App() {
   const location = useLocation()
@@ -31,6 +32,7 @@ export default function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<EpkPage />} />
           <Route path="/jamestown-the-pitts" element={<AlbumPage />} />
+          <Route path="/billy-von" element={<MemberPage />} />
           <Route path="/:slug" element={<TrackPage />} />
         </Routes>
       </AnimatePresence>

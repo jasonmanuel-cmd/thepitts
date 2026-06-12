@@ -5,6 +5,8 @@ export interface BandMember {
   hometown: string
   photoPath?: string
   bioPath?: string
+  videoPath?: string
+  profileSlug?: string
 }
 
 export const members: BandMember[] = [
@@ -29,6 +31,8 @@ export const members: BandMember[] = [
     role: 'Rhythm Guitar',
     hometown: '',
     photoPath: '/billy/billyV.png',
+    videoPath: '/billy/billysvideo.mp4',
+    profileSlug: 'billy-von',
   },
   {
     initials: 'A',

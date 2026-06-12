@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Camera, Video, Globe, Music2, Play, ChevronRight, ExternalLink } from 'lucide-react'
 import { tracks, comparableArtists, streamingLinks } from '../data/tracks'
@@ -114,8 +114,34 @@ export default function EpkPage() {
         <p className="text-text-muted text-sm mb-6">The people behind the noise</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           {members.map((m) => (
-            <MemberCard key={m.initials} member={m} />
+            <MemberCard key={m.name} member={m} />
           ))}
+        </div>
+      </section>
+
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+        <h2 className="text-2xl font-bold text-text-primary mb-6">Celebration of Life</h2>
+        <div className="grid sm:grid-cols-2 gap-6">
+          <div className="glass-card overflow-hidden">
+            <div className="aspect-[3/4] overflow-hidden">
+              <img
+                src="/matthewcelebrationoflife.png"
+                alt="Celebration of Life - Matthew"
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div className="glass-card overflow-hidden">
+            <div className="aspect-[3/4] overflow-hidden">
+              <img
+                src="/laurencelebrationoflife.png"
+                alt="Celebration of Life - Lauren"
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -177,6 +203,18 @@ export default function EpkPage() {
               <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
             </a>
           ))}
+        </div>
+      </section>
+
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+        <h2 className="text-2xl font-bold text-text-primary mb-6">Find The Pitts</h2>
+        <div className="glass-card overflow-hidden">
+          <img
+            src="/thepittsad.png"
+            alt="The Pitts - Find their music"
+            loading="lazy"
+            className="w-full h-auto"
+          />
         </div>
       </section>
 
@@ -287,10 +325,10 @@ export default function EpkPage() {
 }
 
 function MemberCard({ member }: { member: BandMember }) {
-  return (
+  const CardContent = (
     <div className="glass-card p-6 text-center">
       {member.photoPath ? (
-        <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-white/[0.1]">
+        <div className={`w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-2 ring-white/[0.1] ${member.videoPath ? 'group-hover:ring-brand/50 transition-all' : ''}`}>
           <img
             src={member.photoPath}
             alt={`${member.name} photo`}
@@ -308,4 +346,14 @@ function MemberCard({ member }: { member: BandMember }) {
       {member.hometown && <p className="text-text-muted text-xs mt-2">{member.hometown}</p>}
     </div>
   )
+
+  if (member.profileSlug) {
+    return (
+      <Link to={`/${member.profileSlug}`} className="group min-h-touch block">
+        {CardContent}
+      </Link>
+    )
+  }
+
+  return CardContent
 }
