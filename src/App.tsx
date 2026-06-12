@@ -32,7 +32,7 @@ export default function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<EpkPage />} />
           <Route path="/jamestown-the-pitts" element={<AlbumPage />} />
-          <Route path="/billy-von" element={<MemberPage />} />
+          <Route path="/member/:slug" element={<MemberPage />} />
           <Route path="/:slug" element={<TrackPage />} />
         </Routes>
       </AnimatePresence>

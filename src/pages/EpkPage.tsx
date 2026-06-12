@@ -349,7 +349,7 @@ function MemberCard({ member }: { member: BandMember }) {
 
   if (member.profileSlug) {
     return (
-      <Link to={`/${member.profileSlug}`} className="group min-h-touch block">
+      <Link to={`/member/${member.profileSlug}`} className="group min-h-touch block">
         {CardContent}
       </Link>
     )
