@@ -219,6 +219,30 @@ export default function EpkPage() {
       </section>
 
       <section className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+        <h2 className="text-2xl font-bold text-text-primary mb-2">Lyric Video</h2>
+        <p className="text-text-muted text-sm mb-6">Watch and sing along to Jamestown</p>
+        <a
+          href="/lyric-video.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="glass-card group block overflow-hidden min-h-touch"
+        >
+          <div className="aspect-video flex items-center justify-center bg-gradient-to-br from-brand/20 via-surface-2 to-[#0a0a0c] relative">
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-brand/90 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Play className="w-7 h-7 text-white ml-1" aria-hidden="true" />
+              </div>
+              <p className="text-text-primary font-semibold">Jamestown &mdash; Lyric Video</p>
+              <p className="text-text-muted text-sm mt-1 inline-flex items-center gap-1">
+                Play lyric video
+                <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+              </p>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
         <h2 className="text-2xl font-bold text-text-primary mb-6">Live</h2>
         <div className="glass-panel aspect-video flex items-center justify-center">
           <div className="text-center">
