@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import SplashScreen from './components/SplashScreen'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -38,6 +39,7 @@ export default function App() {
       </AnimatePresence>
       <Footer />
       <Analytics />
+      <SpeedInsights />
     </>
   )
 }
